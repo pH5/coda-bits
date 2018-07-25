@@ -43,7 +43,7 @@ static const uint16_t template_imx6[12] = {
 	0xe005, ANY,	/* mv.h $1, firmware_version_number */
 	0xe056,		/* or.w $0, $1 */
 	0xe0c2, 0x0070,	/* st.w $0, 0x1c0 ; FIRMWARE_VERNUM */
-	0xe004, 0x0000, /* mv.h $0, #0x0 */
+	0xe004, ANY,	/* mv.h $0, #0x0 */
 	0xae20,		/* lsl  $0, #16 */
 	0xe00a, ANY,	/* or.h $0, firmware_code_revision */
 	0xe0c2, 0x0071,	/* st.w $0, 0x1c4 ; FIRMWARE_CODE_REV */
@@ -101,7 +101,8 @@ int usage()
 }
 
 int main(int argc, char *argv[]) {
-	uint16_t pid, ver = 0, rev = 0;
+	uint16_t pid, ver = 0;
+	uint32_t rev = 0;
 	const uint16_t *code;
 	const char *inpath;
 	FILE *f;
@@ -152,7 +153,7 @@ int main(int argc, char *argv[]) {
 	case CODA_960:
 		code = find_template(f, template_imx6, 12);
 		if (code)
-			rev = code[9];
+			rev = (code[6] << 16) | code[9];
 		break;
 	}
 	if (code == NULL) {
@@ -163,5 +164,5 @@ int main(int argc, char *argv[]) {
 
 	printf("Version Number: 0x%04x (%d.%d.%d)\n", ver, ver >> 12, (ver >> 8) & 0xf, ver & 0xff);
 	if (rev)
-		printf("Code Revision: %d\n", rev);
+		printf("Code Revision: 0x%x\n", rev);
 };
