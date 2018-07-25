@@ -131,6 +131,15 @@ the CODA VPU firmware files::
   $ wget http://www.nxp.com/lgfiles/NMG/MAD/YOCTO/firmware-imx-5.4.bin
   $ dd if=firmware-imx-5.4.bin bs=34087 skip=1 | tar xj
 
+  $ wget http://www.nxp.com/lgfiles/NMG/MAD/YOCTO/firmware-imx-6.0.bin
+  $ dd if=firmware-imx-6.0.bin bs=36566 skip=1 | tar xj
+
+  $ wget http://www.nxp.com/lgfiles/NMG/MAD/YOCTO/firmware-imx-7.2.bin
+  $ dd if=firmware-imx-7.2.bin bs=36909 skip=1 | tar xj
+
+  $ wget http://www.nxp.com/lgfiles/NMG/MAD/YOCTO/firmware-imx-7.4.bin
+  $ dd if=firmware-imx-7.4.bin bs=36909 skip=1 | tar xj
+
 These all contain the same firmware versions for i.MX 27 to i.MX53 in the
 firmware/vpu subdirectory:
 
@@ -152,9 +161,9 @@ i.MX6Q/D  CODA960 vpu_fw_imx6q.bin
 i.MX6DL/S CODA960 vpu_fw_imx6d.bin
 ========= ======= ================
 
-=============== ================
-Package version	Firmware version
-=============== ================
+=============== =======================
+Package version Firmware version
+=============== =======================
 3.0.38-4.0.0    2.1.9 r36350
 3.5.7-1.0.0     2.3.10 r40778
 3.10.17-1.0.0   3.1.1 r46056
@@ -163,4 +172,6 @@ Package version	Firmware version
 5.2             3.1.1 r46070
 5.3             3.1.1 r46070
 5.4             3.1.1 r46072
-=============== ================
+6.0             3.1.1 r46075 (0xb3fb)
+7.2-7.4         3.1.1 r570363 (0x8b3fb)
+=============== =======================
