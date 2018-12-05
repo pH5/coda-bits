@@ -134,11 +134,29 @@ the CODA VPU firmware files::
   $ wget http://www.nxp.com/lgfiles/NMG/MAD/YOCTO/firmware-imx-6.0.bin
   $ dd if=firmware-imx-6.0.bin bs=36566 skip=1 | tar xj
 
+  $ wget http://www.nxp.com/lgfiles/NMG/MAD/YOCTO/firmware-imx-7.1.bin
+  $ dd if=firmware-imx-7.1.bin bs=36909 skip=1 | tar xj
+
   $ wget http://www.nxp.com/lgfiles/NMG/MAD/YOCTO/firmware-imx-7.2.bin
   $ dd if=firmware-imx-7.2.bin bs=36909 skip=1 | tar xj
 
   $ wget http://www.nxp.com/lgfiles/NMG/MAD/YOCTO/firmware-imx-7.4.bin
   $ dd if=firmware-imx-7.4.bin bs=36909 skip=1 | tar xj
+
+  $ wget http://www.nxp.com/lgfiles/NMG/MAD/YOCTO/firmware-imx-7.5.bin
+  $ dd if=firmware-imx-7.5.bin bs=37083 skip=1 | tar xj
+
+  $ wget http://www.nxp.com/lgfiles/NMG/MAD/YOCTO/firmware-imx-7.6.bin
+  $ dd if=firmware-imx-7.6.bin bs=37623 skip=1 | tar xj
+
+  $ wget http://www.nxp.com/lgfiles/NMG/MAD/YOCTO/firmware-imx-7.7.bin
+  $ dd if=firmware-imx-7.7.bin bs=37622 skip=1 | tar xj
+
+  $ wget http://www.nxp.com/lgfiles/NMG/MAD/YOCTO/firmware-imx-7.8.bin
+  $ dd if=firmware-imx-7.8.bin bs=38868 skip=1 | tar xj
+
+  $ wget http://www.nxp.com/lgfiles/NMG/MAD/YOCTO/firmware-imx-7.9.bin
+  $ dd if=firmware-imx-7.9.bin bs=38868 skip=1 | tar xj
 
 These all contain the same firmware versions for i.MX 27 to i.MX53 in the
 firmware/vpu subdirectory:
@@ -172,6 +190,6 @@ Package version Firmware version
 5.2             3.1.1 r46070
 5.3             3.1.1 r46070
 5.4             3.1.1 r46072
-6.0             3.1.1 r46075 (0xb3fb)
-7.2-7.4         3.1.1 r570363 (0x8b3fb)
+6.0-7.1         3.1.1 r46075 (0xb3fb)
+7.2-7.9         3.1.1 r570363 (0x8b3fb)
 =============== =======================
