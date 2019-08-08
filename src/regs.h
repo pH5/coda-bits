@@ -1,3 +1,6 @@
+/* CODA register layout
+ * SPDX-License-Identifier: 0BSD
+ */
 #ifndef __REGS_H__
 #define __REGS_H__
 

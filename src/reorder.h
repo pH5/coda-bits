@@ -1,3 +1,6 @@
+/* CODA host memory layout to BIT processor layout reordering code
+ * SPDX-License-Identifier: 0BSD
+ */
 #ifndef __REORDER_H__
 #define __REORDER_H__
 

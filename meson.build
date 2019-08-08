@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: 0BSD
+
 project('coda-bits', 'c',
 	version : '0.1',
 	license : '0BSD')

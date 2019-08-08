@@ -1,3 +1,6 @@
+/* CODA BIT processor instruction set
+ * SPDX-License-Identifier: 0BSD
+ */
 #ifndef __ISET_H__
 #define __ISET_H__
 
