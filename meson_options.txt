@@ -1,0 +1,4 @@
+option('docs',
+	type: 'boolean',
+	value: false,
+	description: 'Install documentation')

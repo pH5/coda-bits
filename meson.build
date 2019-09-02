@@ -26,3 +26,12 @@ coda_fwinfo_sources = [
 	'src/reorder.h'
 ]
 executable('coda-fwinfo', coda_fwinfo_sources, install : true)
+
+codabits_docs = [
+	'README.rst',
+	'doc/bit-isa.rst',
+	'doc/bit.rst'
+]
+if get_option('docs')
+	install_data(codabits_docs, install_dir: 'share/doc/coda-bits')
+endif
