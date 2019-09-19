@@ -75,6 +75,27 @@ Part      Function
 3a000.bin h.264 MVC encode
 ========= ================
 
+The i.MX51 firmware version 1.4.50 splits into the following parts.
+Their function can be determined from the code at address 0x010a, which checks
+the RUN_COD_STD parameter:
+
+========= ================
+Part      Function
+========= ================
+00000.bin h.264 AVC decode
+04800.bin
+09000.bin VC1 decode
+0d000.bin MPEG-2 decode
+10000.bin MPEG-4 decode
+14800.bin
+17800.bin RV decode
+19800.bin MJPEG decode
+1c000.bin h.264 encode
+1e000.bin
+1f000.bin MPEG-4 encode
+22000.bin MJPEG encode
+========= ================
+
 Note that the output of bitspl is always in BIT processor order, even if the
 input is in host memory order::
 
